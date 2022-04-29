@@ -1,4 +1,10 @@
-# Clean project model to node and typescript
+## Clean project model to node and typescript
+
+### 0 - Start the project as a node project
+
+```
+npm init -y
+```
 
 ### 1 - Create .editorconfig file
 
