@@ -1,12 +1,12 @@
 ## Clean project model to node and typescript
 
-### 1 - Start the project as a node project
+### Start the project as a node project
 
 ```
 npm init -y
 ```
 
-### 2 - Create and Configure the .editorconfig file as follows:
+### Create and Configure the .editorconfig file as follows:
 
 ```
 root = true
@@ -19,19 +19,31 @@ trim_trailing_whitespace = false
 insert_final_newline = true
 ```
 
-### 3 - Install typescript and the prettier in dev mode
+### Install packages in DevDependencies
 
 ```
 npm install typescript ts-node-dev @types/express prettier --save-dev
+npm install eslint --save-dev
+npm install eslint-config-prettier eslint-plugin-prettier babel-eslint --save-dev
 ```
 
-### 4 - Create tsconfig.json file running the following command
+### Install @types in DevDependencies
+```
+npm install @types/eslint @types/express @types/morgan @types/mysql @types/prettier @types/cors --save-dev
+```
+
+### Install packeges in Dependencies
+```
+npm install express cors morgan body-parser --save
+```
+
+### Create tsconfig.json file running the following command
 
 ```
 npx tsc --init
 ```
 
-### 5 - Configure the .tsconfig.json file as follows:
+### Configure the .tsconfig.json file as follows:
 
 ```
 {
@@ -47,19 +59,13 @@ npx tsc --init
 }
 ```
 
-### 6 - Install eslint package
-
-```
-npm install eslint --save-dev
-```
-
-### 7 - Create .eslintrc.json file running the following command
+### Create .eslintrc.json file running the following command
 
 ```
 npx eslint --init
 ```
 
-### 8 - Configure the .eslintrc.json file as follows:
+### Configure the .eslintrc.json file as follows:
 
 ```
 {
@@ -84,28 +90,20 @@ npx eslint --init
 }
 ```
 
-### 9 - Install eslint config packages
+### Create the .gitignore file and add the following lines:
 
 ```
-npm install eslint-config-prettier eslint-plugin-prettier babel-eslint --save-dev
+echo node_modules dist .env > .gitignore
 ```
 
-### 10 - Create the .gitignore file and add the following lines:
+### Create the .env and the .env.local files and add the following lines:
 
 ```
-node_modules
-dist
-.env
+echo PROJECT_NAME= PROJECT_PORT=3000 DB_HOST=localhost DB_NAME= DB_USER=root DB_PASSWORD= DB_PORT= >.env
+echo PROJECT_NAME= PROJECT_PORT= DB_HOST= DB_NAME= DB_USER= DB_PASSWORD= DB_PORT= >.env.local
 ```
 
-### 11 - Create the .env and the .env.local files and add the following lines:
-
-```
-PROJECT_NAME=''
-PORT=''
-```
-
-### 12 - Configure the package scripts as follows:
+### Configure the package scripts as follows:
 
 ```
 "dev": "ts-node-dev src/server.ts",
