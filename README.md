@@ -123,3 +123,28 @@ cd src/models && echo '' > name.model.ts && cd .. && cd ..
 cd src/routes && echo '' > router.ts && cd .. && cd ..
 cd src/database && echo '' > db.ts && cd .. && cd ..
 ```
+
+### Update server.ts to initial express configuration
+```
+// imports
+import express from "express";
+import bodyParser from "body-parser";
+
+// dotenv startup
+require("dotenv").config();
+
+const port = process.env.PROJECT_PORT || 5000;
+
+// set up express
+const app = express();
+
+// middleware
+app.use(bodyParser.json());
+
+// listen
+app.listen(port, () => {
+  console.log(
+    `Server listening on port ${port}. Visit http://localhost:${port}`
+  );
+});
+```
