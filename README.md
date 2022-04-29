@@ -109,3 +109,17 @@ echo PROJECT_NAME= PROJECT_PORT= DB_HOST= DB_NAME= DB_USER= DB_PASSWORD= DB_PORT
 "start": "node ./dist/src/server.js",
 "build": "tsc"
 ```
+
+### Create the folder structure
+```
+mkdir src/controllers && mkdir src/models && mkdir src/routes && mkdir src/database
+```
+
+### Create the initial files
+```
+cd src && echo "import { express } from 'express'" > server.ts && cd ..
+cd src/controllers && echo '' > name.controller.ts && cd .. && cd ..
+cd src/models && echo '' > name.model.ts && cd .. && cd ..
+cd src/routes && echo '' > router.ts && cd .. && cd ..
+cd src/database && echo '' > db.ts && cd .. && cd ..
+```
