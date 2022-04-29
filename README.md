@@ -22,8 +22,7 @@ insert_final_newline = true
 ### Install packages in DevDependencies
 
 ```
-npm install typescript ts-node-dev @types/express prettier --save-dev
-npm install eslint --save-dev
+npm install typescript ts-node-dev prettier eslint --save-dev
 npm install eslint-config-prettier eslint-plugin-prettier babel-eslint --save-dev
 ```
 
