@@ -22,7 +22,7 @@ insert_final_newline = true
 ### Install packages in DevDependencies
 
 ```
-npm install typescript ts-node-dev prettier eslint dotenv --save-dev
+npm install typescript ts-node-dev prettier eslint dotenv morgan --save-dev
 npm install eslint-config-prettier eslint-plugin-prettier babel-eslint --save-dev
 ```
 
@@ -33,7 +33,7 @@ npm install @types/eslint @types/express @types/morgan @types/mysql @types/prett
 
 ### Install packeges in Dependencies
 ```
-npm install express cors morgan body-parser --save
+npm install express cors body-parser --save
 ```
 
 ### Create tsconfig.json file running the following command
