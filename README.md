@@ -106,15 +106,9 @@ echo PROJECT_NAME= PROJECT_PORT=3000 DB_HOST=localhost DB_NAME= DB_USER=root DB_
 mkdir src/controllers && mkdir src/models && mkdir src/routes && mkdir src/database
 ```
 
-### Create the standart router file
-```
-cd .\src\routes && echo ''> router.ts && cd .. && cd ..
-```
-
-
 ### Create the initial files
 ```
-cd src && echo '' > server.ts && cd .. && cd src/controllers && echo '' > entity.controller.ts && cd .. && cd .. && cd src/models && echo '' > entity.model.ts && cd .. && cd .. && cd src/database && echo '' > db.ts && cd .. && cd .. && cd src/routes && echo '' > routes.ts
+cd .\src\routes && echo ''> router.ts && cd .. && cd .. && cd src && echo '' > server.ts && cd .. && cd src/controllers && echo '' > entity.controller.ts && cd .. && cd .. && cd src/models && echo '' > entity.model.ts && cd .. && cd .. && cd src/database && echo '' > db.ts && cd .. && cd .. && cd src/routes && echo '' > routes.ts
 ```
 
 ### Configure the standart route
