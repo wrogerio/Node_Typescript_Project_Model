@@ -108,7 +108,7 @@ mkdir src/controllers && mkdir src/models && mkdir src/routes && mkdir src/datab
 
 ### Create the standart router file
 ```
-cd .\src\routes && echo 'import express from "express";' '' 'const router = express.Router();' '' 'router.get("/", (req, res) => {' '  res.send("Hello World!");' '});' '' 'module.exports = router;' > router.ts && cd .. && cd ..
+cd .\src\routes && echo 'import express from "express";' '' 'const router = express.Router();' '' 'router.get("/", (req, res) => {' '  res.send("Hello World!");' '});' '' 'export default router;' > router.ts && cd .. && cd ..
 ```
 
 
@@ -122,7 +122,9 @@ cd src && echo '' > server.ts && cd .. && cd src/controllers && echo '' > entity
 // imports
 import express from "express";
 import bodyParser from "body-parser";
-import { router } from "./routes/router";
+import cors from "cors";
+import morgan from "morgan";
+import router from "./routes/router";
 
 // dotenv startup
 require("dotenv").config();
@@ -146,4 +148,5 @@ app.listen(port, () => {
     `Server listening on port ${port}. Visit http://localhost:${port}`
   );
 });
+
 ```
