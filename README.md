@@ -134,6 +134,7 @@ cd src/database && echo '' > db.ts && cd .. && cd ..
 // imports
 import express from "express";
 import bodyParser from "body-parser";
+import { router } from "./routes/router";
 
 // dotenv startup
 require("dotenv").config();
@@ -145,6 +146,11 @@ const app = express();
 
 // middleware
 app.use(bodyParser.json());
+app.use(morgan("dev"));
+app.use(cors({ origin: "*" }));
+
+// routes
+app.use(router);
 
 // listen
 app.listen(port, () => {
