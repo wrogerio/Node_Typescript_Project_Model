@@ -90,7 +90,7 @@ echo node_modules dist .env > .gitignore
 ### Create the .env and the .env.local files and add the following lines:
 
 ```
-echo PROJECT_NAME= PROJECT_PORT=3000 DB_HOST=localhost DB_NAME= DB_USER=root DB_PASSWORD= DB_PORT=3306 >.env && echo PROJECT_NAME= PROJECT_PORT= DB_HOST= DB_NAME= DB_USER= DB_PASSWORD= DB_PORT= >.env.local
+echo PROJECT_NAME= PROJECT_PORT=3000 DB_HOST=localhost DB_NAME= DB_USER=root DB_PASS= DB_PORT=3306 >.env && echo PROJECT_NAME= PROJECT_PORT= DB_HOST= DB_NAME= DB_USER= DB_PASS= DB_PORT= >.env.local
 ```
 
 ### Configure the package scripts as follows:
