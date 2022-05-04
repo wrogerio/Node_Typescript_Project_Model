@@ -9,14 +9,7 @@ npm init -y
 ### Create and Configure the .editorconfig file as follows:
 
 ```
-root = true
-[*]
-indent_style = space
-indent_size = 2
-end_of_line = crlf
-charset = utf-8
-trim_trailing_whitespace = false
-insert_final_newline = true
+echo 'root=true' '' '[*]' '' 'indent_style = space' 'indent_size = 2' '' 'end_of_line = crlt' 'charset = utf-8' '' 'trim_trailing_whitespace = false' 'insert_final_newline = true'> .editorconfig
 ```
 
 ### Install packages in DevDependencies
