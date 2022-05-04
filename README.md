@@ -9,7 +9,7 @@ npm init -y
 ### Create and Configure the .editorconfig file as follows:
 
 ```
-echo 'root=true' '' '[*]' '' 'indent_style = space' 'indent_size = 2' '' 'end_of_line = crlt' 'charset = utf-8' '' 'trim_trailing_whitespace = false' 'insert_final_newline = true'> .editorconfig
+echo 'root=true' '' '[*]' '' 'indent_style = space' 'indent_size = 2' '' 'end_of_line = lf' 'charset = utf-8' '' 'trim_trailing_whitespace = false' 'insert_final_newline = true'> .editorconfig
 ```
 
 ### Install packages in DevDependencies
@@ -114,7 +114,21 @@ cd .\src\routes && echo 'import express from "express";' '' 'const router = expr
 
 ### Create the initial files
 ```
-cd src && echo '' > server.ts && cd .. && cd src/controllers && echo '' > entity.controller.ts && cd .. && cd .. && cd src/models && echo '' > entity.model.ts && cd .. && cd .. && cd src/database && echo '' > db.ts && cd .. && cd ..
+cd src && echo '' > server.ts && cd .. && cd src/controllers && echo '' > entity.controller.ts && cd .. && cd .. && cd src/models && echo '' > entity.model.ts && cd .. && cd .. && cd src/database && echo '' > db.ts && cd .. && cd .. && cd src/routes && echo '' > routes.ts
+```
+
+### Configure the standart route
+```
+// requires
+import express from "express";
+const router = express.Router();
+
+// routes
+router.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+export default router;
 ```
 
 ### Update server.ts to initial express configuration
