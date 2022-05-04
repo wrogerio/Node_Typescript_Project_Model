@@ -114,10 +114,7 @@ cd .\src\routes && echo 'import express from "express";' '' 'const router = expr
 
 ### Create the initial files
 ```
-cd src && echo "import { express } from 'express'" > server.ts && cd ..
-cd src/controllers && echo '' > entity.controller.ts && cd .. && cd ..
-cd src/models && echo '' > entity.model.ts && cd .. && cd ..
-cd src/database && echo '' > db.ts && cd .. && cd ..
+cd src && echo "import { express } from 'express'" > server.ts && cd .. && cd src/controllers && echo '' > entity.controller.ts && cd .. && cd .. && cd src/models && echo '' > entity.model.ts && cd .. && cd .. && cd src/database && echo '' > db.ts && cd .. && cd ..
 ```
 
 ### Update server.ts to initial express configuration
