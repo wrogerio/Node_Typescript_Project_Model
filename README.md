@@ -108,7 +108,7 @@ mkdir src/controllers && mkdir src/models && mkdir src/routes && mkdir src/datab
 
 ### Create the initial files
 ```
-cd .\src\routes && echo ''> router.ts && cd .. && cd .. && cd src && echo '' > server.ts && cd .. && cd src/controllers && echo '' > entity.controller.ts && cd .. && cd .. && cd src/models && echo '' > entity.model.ts && cd .. && cd .. && cd src/database && echo '' > db.ts && cd .. && cd .. && cd src/routes && echo '' > routes.ts
+cd .\src\routes && echo ''> router.ts && cd .. && cd .. && cd src && echo '' > server.ts && cd .. && cd src/controllers && echo '' > entity.controller.ts && cd .. && cd .. && cd src/models && echo '' > entity.model.ts && cd .. && cd .. && cd src/database && echo '' > db.ts && cd .. && cd ..
 ```
 
 ### Configure the standart route
