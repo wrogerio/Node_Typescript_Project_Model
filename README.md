@@ -108,7 +108,7 @@ mkdir src/controllers && mkdir src/models && mkdir src/routes && mkdir src/datab
 
 ### Create the standart router file
 ```
-cd .\src\routes && echo 'import express from "express";' '' 'const router = express.Router();' '' 'router.get("/", (req, res) => {' '  res.send("Hello World!");' '});' '' 'export default router;' > router.ts && cd .. && cd ..
+cd .\src\routes && echo ''> router.ts && cd .. && cd ..
 ```
 
 
