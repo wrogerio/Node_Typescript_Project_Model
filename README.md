@@ -115,12 +115,17 @@ echo PROJECT_NAME= PROJECT_PORT= DB_HOST= DB_NAME= DB_USER= DB_PASSWORD= DB_PORT
 mkdir src/controllers && mkdir src/models && mkdir src/routes && mkdir src/database
 ```
 
+### Create the standart router file
+```
+cd .\src\routes && echo 'import express from "express";' '' 'const router = express.Router();' '' 'router.get("/", (req, res) => {' '  res.send("Hello World!");' '});' '' 'module.exports = router;' > router.ts && cd .. && cd ..
+```
+
+
 ### Create the initial files
 ```
 cd src && echo "import { express } from 'express'" > server.ts && cd ..
-cd src/controllers && echo '' > name.controller.ts && cd .. && cd ..
-cd src/models && echo '' > name.model.ts && cd .. && cd ..
-cd src/routes && echo '' > router.ts && cd .. && cd ..
+cd src/controllers && echo '' > entity.controller.ts && cd .. && cd ..
+cd src/models && echo '' > entity.model.ts && cd .. && cd ..
 cd src/database && echo '' > db.ts && cd .. && cd ..
 ```
 
